@@ -1,12 +1,14 @@
 {
   "name": "wacktor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple 2D vector library, written in ES6.",
-  "main": "build/bundle.js",
+  "main": "lib/vector.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "test": "mocha --compilers js:babel/register"
   },
   "author": "Gregor",
