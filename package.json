@@ -1,5 +1,5 @@
 {
-  "name": "Wacktor",
+  "name": "wacktor",
   "version": "1.0.0",
   "description": "Simple 2D vector library, written in ES6.",
   "main": "build/bundle.js",
@@ -11,6 +11,7 @@
   },
   "author": "Gregor",
   "license": "BSD",
+  "repository": "github:Gregoor/Wacktor",
   "dependencies": {},
   "devDependencies": {
     "mocha": "~2.2.5",
