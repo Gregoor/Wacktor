@@ -28,6 +28,10 @@ class Vector {
     this._magSq = this._mag = null;
   }
 
+  *[Symbol.iterator]() {
+    yield* this.toArray();
+  }
+
   add(...args) {
     let [nx, ny] = valsOf(args);
     return new Vector(this.x + nx, this.y + ny);

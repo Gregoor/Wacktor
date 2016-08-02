@@ -118,4 +118,16 @@ describe('Vector', () => {
 
   });
 
+  describe('#Symbol.iterable', () => {
+
+    it('spreads the Vector', () => {
+      const vX = 23;
+      const vY = 42;
+      const [x, y] = new Vector(vX, vY);
+      assert.equal(x, vX);
+      assert.equal(y, vY);
+    })
+
+  })
+
 });
