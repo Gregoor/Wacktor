@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 let sqr = n => Math.pow(n, 2);
 
 let valsOf = (args) => {
@@ -25,11 +27,11 @@ class Vector {
     } else x = o;
     this.x = x;
     this.y = y;
-    this._magSq = this._mag = null;
+    Object.freeze(this);
   }
 
-  *[Symbol.iterator]() {
-    yield* this.toArray();
+  [Symbol.iterator]() {
+    return this.toArray()[Symbol.iterator]();
   }
 
   add(...args) {
@@ -67,11 +69,11 @@ class Vector {
   }
 
   magSq() {
-    return this._magSq || (this._magSq = sqr(this.x) + sqr(this.y));
+    return sqr(this.x) + sqr(this.y);
   }
 
   mag() {
-    return this._mag || (this._mag = Math.sqrt(this.magSq()));
+    return Math.sqrt(this.magSq());
   }
 
   dist(...args) {

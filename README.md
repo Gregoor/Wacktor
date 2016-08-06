@@ -17,6 +17,15 @@ var v2 = new Vector({x: 13, y: 37);
 
 ## Methods
 
+### Iterable
+
+```javascript
+var v1 = new Vector(2, 3);
+console.log(...v1); // 2, 3
+var [x, y] = v1;
+console.log(x);     // 2
+```
+
 ### add, sub, mul
 
 The method signature is the same for each of these.
