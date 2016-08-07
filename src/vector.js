@@ -1,5 +1,3 @@
-import 'babel-polyfill';
-
 let sqr = n => Math.pow(n, 2);
 
 let valsOf = (args) => {

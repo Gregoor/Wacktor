@@ -1,5 +1,4 @@
 # Wacktor
-## Brought to you by ES6 & [Babel](https://babeljs.io/)
 
 Solves the main pain points I have with the other vector libraries:
 
