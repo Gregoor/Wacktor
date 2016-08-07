@@ -52,8 +52,8 @@ class Vector {
   }
 
   dot(...args) {
-    let v = new Vector(args);
-    return this.x * v.x + this.y + v.y;
+    let [nx, ny] = valsOf(args);
+    return this.x * nx + this.y + ny;
   }
 
   angle(...args) {
@@ -62,8 +62,8 @@ class Vector {
   }
 
   equals(...args) {
-    let v = new Vector(args);
-    return this.x == v.x && this.y == v.y;
+    let [nx, ny] = valsOf(args);
+    return this.x == nx && this.y == ny;
   }
 
   magSq() {
@@ -75,8 +75,7 @@ class Vector {
   }
 
   dist(...args) {
-    let v = new Vector(args);
-    return this.sub(v).mag();
+    return this.sub(new Vector(valsOf(args))).mag();
   }
 
   norm() {

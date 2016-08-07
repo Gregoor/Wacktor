@@ -128,6 +128,14 @@ describe('Vector', () => {
       assert.equal(y, vY);
     })
 
-  })
+  });
+
+  describe('#dist', () => {
+
+    it('gives the correct distance between two vectors', () => {
+      assert.equal(new Vector(1, 0).dist(new Vector(2, 0)), 1);
+    });
+
+  });
 
 });
