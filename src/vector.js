@@ -74,6 +74,10 @@ class Vector {
     return Math.sqrt(this.magSq());
   }
 
+  distSq(...args) {
+    return this.sub(new Vector(valsOf(args))).magSq();
+  }
+
   dist(...args) {
     return this.sub(new Vector(valsOf(args))).mag();
   }
