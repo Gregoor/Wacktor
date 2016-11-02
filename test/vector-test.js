@@ -138,4 +138,14 @@ describe('Vector', () => {
 
   });
 
+  describe('#clamp', () => {
+
+    it('correctly clamps', () => {
+      const v = new Vector(23, 42).clamp(30, 40);
+      assert.equal(v.x, 30);
+      assert.equal(v.y, 40);
+    });
+
+  });
+
 });

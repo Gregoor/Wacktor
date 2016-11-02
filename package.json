@@ -1,6 +1,6 @@
 {
   "name": "wacktor",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Immutable 2D vector library.",
   "main": "lib/vector.js",
   "directories": {

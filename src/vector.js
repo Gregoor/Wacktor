@@ -1,6 +1,6 @@
-let sqr = n => Math.pow(n, 2);
+const sqr = n => Math.pow(n, 2);
 
-let valsOf = (args) => {
+const valsOf = (args) => {
   let nx = args[0];
   if (args.length > 1 || nx instanceof Vector) {
     let v = new Vector(...args);
@@ -8,6 +8,8 @@ let valsOf = (args) => {
   }
   return [nx, nx];
 };
+
+const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
 
 class Vector {
 
@@ -96,6 +98,10 @@ class Vector {
 
   toArray() {
     return [this.x, this.y];
+  }
+
+  clamp(min, max) {
+    return new Vector(clamp(this.x, min, max), clamp(this.y, min, max));
   }
 
 }
